@@ -29,7 +29,6 @@
 form.message-search input::placeholder,
 ::placeholder {
 	color: rgba(171, 178, 191, 0.6);
-	/* fix opacity in Firefox */
 	opacity: 1;
 }
 
@@ -114,8 +113,8 @@ form.message-search input {
 	color: #8fc6ff;
 }
 
+/* thin left accent bar in blue, rest panel background */
 #chat .self {
-	/* thin left accent bar in blue, rest panel background */
 	background: linear-gradient(to right, #61afef 5px, #2c313a 5px);
 }
 
@@ -124,84 +123,101 @@ form.message-search input {
 }
 
 /* Nick colors (One Dark palette) */
+
+/* red */
 #chat.colored-nicks .user.color-1,
 #chat.colored-nicks .user.color-17 {
-	color: #e06c75; /* red */
+	color: #e06c75;
 }
 
+/* red light */
 #chat.colored-nicks .user.color-2,
 #chat.colored-nicks .user.color-18 {
-	color: #ff7b86; /* red light */
+	color: #ff7b86;
 }
 
+/* orange */
 #chat.colored-nicks .user.color-3,
 #chat.colored-nicks .user.color-19 {
-	color: #d19a66; /* orange */
+	color: #d19a66;
 }
 
+/* yellow */
 #chat.colored-nicks .user.color-4,
 #chat.colored-nicks .user.color-20 {
-	color: #e5c07b; /* yellow */
+	color: #e5c07b;
 }
 
+/* yellow light */
 #chat.colored-nicks .user.color-5,
 #chat.colored-nicks .user.color-21 {
-	color: #f2ce8a; /* yellow light */
+	color: #f2ce8a;
 }
 
+/* yellow-brown */
 #chat.colored-nicks .user.color-6,
 #chat.colored-nicks .user.color-22 {
-	color: #caa96b; /* yellow-brown */
+	color: #caa96b;
 }
 
+/* green */
 #chat.colored-nicks .user.color-7,
 #chat.colored-nicks .user.color-23 {
-	color: #98c379; /* green */
+	color: #98c379;
 }
 
+/* green light */
 #chat.colored-nicks .user.color-8,
 #chat.colored-nicks .user.color-24 {
-	color: #a8d08d; /* green light */
+	color: #a8d08d;
 }
 
+/* cyan/teal */
 #chat.colored-nicks .user.color-9,
 #chat.colored-nicks .user.color-25 {
-	color: #56b6c2; /* cyan/teal */
+	color: #56b6c2;
 }
 
+/* cyan light */
 #chat.colored-nicks .user.color-10,
 #chat.colored-nicks .user.color-26 {
-	color: #6fc7d2; /* cyan light */
+	color: #6fc7d2;
 }
 
+/* blue */
 #chat.colored-nicks .user.color-11,
 #chat.colored-nicks .user.color-27 {
-	color: #61afef; /* blue */
+	color: #61afef;
 }
 
+/* blue light */
 #chat.colored-nicks .user.color-12,
 #chat.colored-nicks .user.color-28 {
-	color: #8fc6ff; /* blue light */
+	color: #8fc6ff;
 }
 
+/* magenta */
 #chat.colored-nicks .user.color-13,
 #chat.colored-nicks .user.color-29 {
-	color: #c678dd; /* magenta */
+	color: #c678dd;
 }
 
+/* magenta light */
 #chat.colored-nicks .user.color-14,
 #chat.colored-nicks .user.color-30 {
-	color: #d493e6; /* magenta light */
+	color: #d493e6;
 }
 
+/* neutral blue-gray */
 #chat.colored-nicks .user.color-15,
 #chat.colored-nicks .user.color-31 {
-	color: #b6bdca; /* neutral blue-gray */
+	color: #b6bdca;
 }
 
+/* neutral light */
 #chat.colored-nicks .user.color-16,
 #chat.colored-nicks .user.color-32 {
-	color: #c8ccd4; /* neutral light */
+	color: #c8ccd4;
 }
 
 /* Increase contrast of some IRC colors (One Dark accents) */
@@ -209,17 +225,14 @@ form.message-search input {
 	color: #61afef;
 }
 
-/* blue */
 .irc-fg5 {
 	color: #c678dd;
 }
 
-/* magenta */
 .irc-fg6 {
 	color: #56b6c2;
 }
 
-/* cyan */
 .irc-fg12 {
 	color: #8fc6ff;
 }
