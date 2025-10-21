@@ -26,11 +26,11 @@
 	--overlay-bg-color: rgba(0, 0, 0, 0.8);
 }
 
-form.message-search input::placeholder,
+/* form.message-search input::placeholder,
 ::placeholder {
 	color: rgba(171, 178, 191, 0.6);
 	opacity: 1;
-}
+} */
 
 /* One Dark selection */
 ::selection {
@@ -97,12 +97,12 @@ kbd {
 	margin: 0;
 }
 
-.input,
+/* .input,
 form.message-search input {
 	background: var(--background-light-color);
 	color: var(--body-color);
 	border-color: #3e4451;
-}
+} */
 
 .channel-list-item[data-type="lobby"] {
 	color: #61afef;
