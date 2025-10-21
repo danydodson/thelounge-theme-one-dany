@@ -1,26 +1,26 @@
 {
-  "name": "the-lounge-theme-one-dark",
+  "name": "thelounge-theme-one-dany",
   "version": "1.1.9",
-  "description": "A simple theme with one-dark colours",
+  "description": "A simple theme with one-dany colours",
   "main": "package.json",
   "thelounge": {
-    "name": "OneDark",
+    "name": "OneDany",
     "type": "theme",
     "css": "theme.css",
     "themeColor": "#002b36"
   },
   "license": "MIT",
-  "homepage": "https://github.com/danydodson/the-lounge-theme-one-dark",
+  "homepage": "https://github.com/danydodson/thelounge-theme-one-dany",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danydodson/the-lounge-theme-one-dark.git"
+    "url": "git+https://github.com/danydodson/thelounge-theme-one-dany.git"
   },
   "keywords": [
     "thelounge",
     "thelounge-theme"
   ],
   "bugs": {
-    "url": "https://github.com/danydodson/the-lounge-theme-one-dark/issues"
+    "url": "https://github.com/danydodson/thelounge-theme-one-dany/issues"
   },
   "devDependencies": {
     "stylelint": "^13.1.0",
