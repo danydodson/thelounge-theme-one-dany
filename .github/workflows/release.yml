@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    name: Release workflow
+    name: Release Workflow
 
     runs-on: ubuntu-latest
 
