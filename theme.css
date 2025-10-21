@@ -1,0 +1,225 @@
+/*!
+ * One-Dark
+ *
+ * URL: https://github.com/danydodson/the-lounge-theme-one-dark
+ * License: MIT
+ *
+*/
+
+/* Samsung Internet and Microsoft Edge (yes, both of them use -webkit- prefix) */
+::-webkit-input-placeholder {
+	color: rgba(171, 178, 191, 0.6);
+}
+
+/* One Dark core palette */
+:root {
+	--body-bg-color: #1f2328;
+	--window-bg-color: #1f2328;
+	--body-color: #abb2bf;
+	--body-color-muted: #b6bdca;
+	--link-color: #61afef;
+	--unread-marker-color: #61afef;
+	--date-marker-color: #98c379;
+	--highlight-bg-color: #353b45;
+	--highlight-border-color: #61afef;
+	--background-light-color: #2c313a;
+	--overlay-bg-color: rgba(0, 0, 0, 0.8);
+}
+
+form.message-search input::placeholder,
+::placeholder {
+	color: rgba(171, 178, 191, 0.6);
+	/* fix opacity in Firefox */
+	opacity: 1;
+}
+
+/* One Dark selection */
+::selection {
+	background: #4f5666;
+	color: #abb2bf;
+}
+
+/* One Dark scrollbars */
+::-webkit-scrollbar-thumb:vertical {
+	background: #4f5666;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+	background: #596275;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+	background: #677085;
+}
+
+html {
+	scrollbar-color: #4f5666 rgba(79, 86, 102, 0.15);
+	scrollbar-width: thin;
+}
+
+.irc-monospace,
+pre,
+code,
+kbd {
+	color: #abb2bf;
+	background-color: #353b45;
+	border-color: #3e4451;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#context-menu,
+.textcomplete-menu {
+	border: 0;
+	background-color: #3e4451;
+}
+
+.context-menu-divider {
+	background-color: #565c64;
+}
+
+#chat .show-more .btn {
+	background: rgba(79, 86, 102, 0.3);
+	color: var(--body-color);
+	border: 0;
+	text-transform: uppercase;
+	transition: background 0.2s;
+}
+
+#chat .show-more .btn:hover {
+	background: #61afef;
+}
+
+.btn-reconnect {
+	background: #e06c75;
+	color: var(--body-color);
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+}
+
+.input,
+form.message-search input {
+	background: var(--background-light-color);
+	color: var(--body-color);
+	border-color: #3e4451;
+}
+
+.channel-list-item[data-type="lobby"] {
+	color: #61afef;
+}
+
+.channel-list-item[data-type="lobby"]:hover,
+.channel-list-item[data-type="lobby"].active {
+	color: #8fc6ff;
+}
+
+#chat .self {
+	/* thin left accent bar in blue, rest panel background */
+	background: linear-gradient(to right, #61afef 5px, #2c313a 5px);
+}
+
+#chat table.channel-list td {
+	color: #7f848e;
+}
+
+/* Nick colors (One Dark palette) */
+#chat.colored-nicks .user.color-1,
+#chat.colored-nicks .user.color-17 {
+	color: #e06c75; /* red */
+}
+
+#chat.colored-nicks .user.color-2,
+#chat.colored-nicks .user.color-18 {
+	color: #ff7b86; /* red light */
+}
+
+#chat.colored-nicks .user.color-3,
+#chat.colored-nicks .user.color-19 {
+	color: #d19a66; /* orange */
+}
+
+#chat.colored-nicks .user.color-4,
+#chat.colored-nicks .user.color-20 {
+	color: #e5c07b; /* yellow */
+}
+
+#chat.colored-nicks .user.color-5,
+#chat.colored-nicks .user.color-21 {
+	color: #f2ce8a; /* yellow light */
+}
+
+#chat.colored-nicks .user.color-6,
+#chat.colored-nicks .user.color-22 {
+	color: #caa96b; /* yellow-brown */
+}
+
+#chat.colored-nicks .user.color-7,
+#chat.colored-nicks .user.color-23 {
+	color: #98c379; /* green */
+}
+
+#chat.colored-nicks .user.color-8,
+#chat.colored-nicks .user.color-24 {
+	color: #a8d08d; /* green light */
+}
+
+#chat.colored-nicks .user.color-9,
+#chat.colored-nicks .user.color-25 {
+	color: #56b6c2; /* cyan/teal */
+}
+
+#chat.colored-nicks .user.color-10,
+#chat.colored-nicks .user.color-26 {
+	color: #6fc7d2; /* cyan light */
+}
+
+#chat.colored-nicks .user.color-11,
+#chat.colored-nicks .user.color-27 {
+	color: #61afef; /* blue */
+}
+
+#chat.colored-nicks .user.color-12,
+#chat.colored-nicks .user.color-28 {
+	color: #8fc6ff; /* blue light */
+}
+
+#chat.colored-nicks .user.color-13,
+#chat.colored-nicks .user.color-29 {
+	color: #c678dd; /* magenta */
+}
+
+#chat.colored-nicks .user.color-14,
+#chat.colored-nicks .user.color-30 {
+	color: #d493e6; /* magenta light */
+}
+
+#chat.colored-nicks .user.color-15,
+#chat.colored-nicks .user.color-31 {
+	color: #b6bdca; /* neutral blue-gray */
+}
+
+#chat.colored-nicks .user.color-16,
+#chat.colored-nicks .user.color-32 {
+	color: #c8ccd4; /* neutral light */
+}
+
+/* Increase contrast of some IRC colors (One Dark accents) */
+.irc-fg2 {
+	color: #61afef;
+}
+
+/* blue */
+.irc-fg5 {
+	color: #c678dd;
+}
+
+/* magenta */
+.irc-fg6 {
+	color: #56b6c2;
+}
+
+/* cyan */
+.irc-fg12 {
+	color: #8fc6ff;
+}
