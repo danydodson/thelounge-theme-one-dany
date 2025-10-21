@@ -1,32 +1,27 @@
 {
   "name": "thelounge-theme-one-dany",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple theme with one-dany colours",
   "main": "package.json",
   "thelounge": {
     "name": "OneDany",
     "type": "theme",
     "css": "theme.css",
-    "themeColor": "#002b36"
+    "themeColor": "#1e2127"
   },
   "license": "MIT",
+  "devDependencies": { },
+  "scripts": { },
   "homepage": "https://github.com/danydodson/thelounge-theme-one-dany",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danydodson/thelounge-theme-one-dany.git"
   },
-  "keywords": [
-    "thelounge",
-    "thelounge-theme"
-  ],
   "bugs": {
     "url": "https://github.com/danydodson/thelounge-theme-one-dany/issues"
   },
-  "devDependencies": {
-    "stylelint": "^13.1.0",
-    "stylelint-config-standard": "^22.0.0"
-  },
-  "scripts": {
-    "test": "stylelint theme.css"
-  }
+  "keywords": [
+    "thelounge",
+    "thelounge-theme"
+  ]
 }

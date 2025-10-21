@@ -1,238 +1,1045 @@
-/*!
- * One-Dark
- *
- * URL: https://github.com/danydodson/thelounge-theme-one-dany
- * License: MIT
- *
+/*
+One Dark theme The Lounge.
+Based on the Zenburn theme for The Lounge by JP Smith
+Color scheme based on the One Dark theme for iTerm by Nathan Buchar
+
+Installation instructions can be found here
+https://thelounge.github.io/docs/server/configuration.html#theme
+
+Author: Alexandre Oliveira
+GitHub: https://github.com/RockyTV
 */
 
-/* Samsung Internet and Microsoft Edge (yes, both of them use -webkit- prefix) */
-::-webkit-input-placeholder {
-	color: rgba(171, 178, 191, 0.6);
+
+/* irc colors
+ * 0, white: #fff;
+ * 1, black: #1e2127;
+ * 2, blue: #61afef;
+ * 4, green: #98c379;
+ * 5, light red: #e06c75;
+ * 6, brown: #e06c75;
+ * 7, purple: #c678dd;
+ * 8, orange: #d19a66;
+ * 9, yellow: #d19a66;
+ * 10, light green: #98c379;
+ * 11, cyan: #56b6c2;
+ * 12, light cyan: #56b6c2;
+ * 13, light blue: #61afef;
+ * 14, pink: #c678dd;
+ * 15, grey: #5c6370
+ * 16, light grey: #abb2bf;
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,700');
+
+body {
+	font-family: 'Open Sans', sans-serif;
 }
 
-/* One Dark core palette */
-:root {
-	--body-bg-color: #1f2328;
-	--window-bg-color: #1f2328;
-	--body-color: #abb2bf;
-	--body-color-muted: #b6bdca;
-	--link-color: #61afef;
-	--unread-marker-color: #61afef;
-	--date-marker-color: #98c379;
-	--highlight-bg-color: #353b45;
-	--highlight-border-color: #61afef;
-	--background-light-color: #2c313a;
-	--overlay-bg-color: rgba(0, 0, 0, 0.8);
+.irc-fg0 {
+	color: #fff;
 }
 
-/* form.message-search input::placeholder,
-::placeholder {
-	color: rgba(171, 178, 191, 0.6);
-	opacity: 1;
-} */
+.irc-fg1 {
+	color: #0C0D0F;
+	/* black with 6% brightness */
+}
 
-/* One Dark selection */
-::selection {
-	background: #4f5666;
+.irc-fg2 {
+	color: #4F8EC2;
+	/* blue with 76% brightness */
+}
+
+.irc-fg3 {
+	color: #81A667;
+	/* green with 65% brightness */
+}
+
+.irc-fg4 {
+	color: #FF7A85;
+	/* red with 100% brightness */
+}
+
+.irc-fg5 {
+	color: #d4666f;
+	/* red with 83% brightness */
+}
+
+.irc-fg6 {
+	color: #c678dd;
+}
+
+.irc-fg7 {
+	color: #d19a66;
+}
+
+.irc-fg8 {
+	color: #D1BC66;
+}
+
+.irc-fg9 {
+	color: #98c379;
+}
+
+.irc-fg10 {
+	color: #4A9DA8;
+	/* cyan with 66% brightness */
+}
+
+.irc-fg11 {
+	color: #56b6c2;
+}
+
+.irc-fg12 {
+	color: #5AA1DB;
+	/* blue with 86% brightness */
+}
+
+.irc-fg13 {
+	color: #E48AFF;
+	/* purple with 100% brightness */
+}
+
+.irc-fg14 {
+	color: #808A9C;
+	/* grey with 61% brightness */
+}
+
+.irc-fg15 {
+	color: #C3CBD9;
+	/* light grey with 85% brightness */
+}
+
+.irc-bg0 {
+	background: #fff;
+}
+
+.irc-bg1 {
+	background: #0C0D0F;
+	/* black with 6% brightness */
+}
+
+.irc-bg2 {
+	background: #4F8EC2;
+	/* blue with 76% brightness */
+}
+
+.irc-bg3 {
+	background: #81A667;
+	/* green with 65% brightness */
+}
+
+.irc-bg4 {
+	background: #FF7A85;
+	/* red with 100% brightness */
+}
+
+.irc-bg5 {
+	background: #d4666f;
+	/* red with 83% brightness */
+}
+
+.irc-bg6 {
+	background: #c678dd;
+}
+
+.irc-bg7 {
+	background: #d19a66;
+}
+
+.irc-bg8 {
+	background: #D1BC66;
+}
+
+.irc-bg9 {
+	background: #98c379;
+}
+
+.irc-bg10 {
+	background: #4A9DA8;
+	/* cyan with 66% brightness */
+}
+
+.irc-bg11 {
+	background: #56b6c2;
+}
+
+.irc-bg12 {
+	background: #5AA1DB;
+	/* blue with 86% brightness */
+}
+
+.irc-bg13 {
+	background: #E48AFF;
+	/* purple with 100% brightness */
+}
+
+.irc-bg14 {
+	background: #808A9C;
+	/* grey with 61% brightness */
+}
+
+.irc-bg15 {
+	background: #C3CBD9;
+	/* light grey with 85% brightness */
+}
+
+body {
+	background: #1a1c21;
 	color: #abb2bf;
 }
 
-/* One Dark scrollbars */
-::-webkit-scrollbar-thumb:vertical {
-	background: #4f5666;
+#main,
+#chat .sidebar,
+#windows .chan,
+#windows .window {
+	background: #1e2127;
 }
 
-::-webkit-scrollbar-thumb:vertical:hover {
-	background: #596275;
+#windows .window::before {
+	display: none;
 }
 
-::-webkit-scrollbar-thumb:vertical:active {
-	background: #677085;
+#settings,
+#sign-in,
+#connect .title {
+	color: #98c739;
 }
 
-html {
-	scrollbar-color: #4f5666 rgba(79, 86, 102, 0.15);
-	scrollbar-width: thin;
-}
-
-.irc-monospace,
-pre,
-code,
-kbd {
+#settings,
+#sign-in,
+#connect .opt {
 	color: #abb2bf;
-	background-color: #353b45;
-	border-color: #3e4451;
-	box-shadow: none;
-	text-shadow: none;
 }
 
-#context-menu,
-.textcomplete-menu {
-	border: 0;
-	background-color: #3e4451;
+a:hover,
+a:focus {
+	color: #589DD6;
+	/* blue with 84% brightness */
 }
 
-.context-menu-divider {
-	background-color: #565c64;
+#settings a,
+#help a,
+#changelog a,
+.btn {
+	color: #98c739;
 }
 
-#chat .show-more .btn {
-	background: rgba(79, 86, 102, 0.3);
-	color: var(--body-color);
-	border: 0;
-	text-transform: uppercase;
-	transition: background 0.2s;
+.btn {
+	border-color: #98c739;
 }
 
-#chat .show-more .btn:hover {
-	background: #61afef;
+.btn:hover {
+	background: #98c739;
+	color: #434852;
+	/* grey with 32% brightness */
 }
 
-.btn-reconnect {
-	background: #e06c75;
-	color: var(--body-color);
-	border: 0;
+#sidebar {
+	background: #1a1c21;
+}
+
+#settings a:hover,
+#settings a:focus,
+#help a:hover,
+#help a:focus,
+#changelog a:hover,
+#changelog a:focus,
+#sidebar .chan:first-child {
+	color: #84AD32;
+	/* green with 84% brightness */
+}
+
+#sidebar .chan.lobby.active,
+#sidebar .chan.lobby .lobby-wrap:hover {
+	color: #98c739;
+}
+
+#sidebar .chan.lobby.badge {
+	margin-right: 1px;
+}
+
+#sidebar button,
+#sidebar .chan,
+#sidebar .sign-out,
+#sidebar .empty,
+#sidebar .leave::before,
+#sidebar .close::before,
+#sidebar .lobby .add-channel::before,
+#sidebar .network .collapse-network-icon::before {
+	color: #C3CBD9;
+}
+
+#sidebar .chan:hover,
+#sidebar .active {
+	color: #CFD7E6;
+	/* light-grey with 90% brightness */
+	background-color: #21242b;
+	/* background with 13% brightness */
+}
+
+#sidebar button:hover,
+#sidebar .leave::before:hover,
+#sidebar .close::before:hover,
+#sidebar .chan.active .close:hover,
+#sidebar .lobby .add-channel::before:hover,
+#sidebar .network .collapse-network-icon::before:hover {
+	color: #cfd7e6;
+}
+
+#sidebar .close {
 	border-radius: 0;
-	margin: 0;
 }
 
-/* .input,
-form.message-search input {
-	background: var(--background-light-color);
-	color: var(--body-color);
-	border-color: #3e4451;
-} */
-
-.channel-list-item[data-type="lobby"] {
-	color: #61afef;
+#sidebar .badge {
+	background-color: #272B33;
+	/* background with 20% brightness */
+	color: #abb2bf;
 }
 
-.channel-list-item[data-type="lobby"]:hover,
-.channel-list-item[data-type="lobby"].active {
-	color: #8fc6ff;
+#sidebar .chan .name::after {
+	background: linear-gradient(to right, rgba(26, 28, 33, 0) 0%, rgba(26, 28, 33, 1) 100%);
 }
 
-/* thin left accent bar in blue, rest panel background */
-#chat .self {
-	background: linear-gradient(to right, #61afef 5px, #2c313a 5px);
+#sidebar .chan:hover .name::after,
+#sidebar .chan.active .name::after {
+	background: linear-gradient(to right, rgba(33, 36, 43, 0) 0%, rgba(33, 36, 43, 1) 100%);
 }
 
-#chat table.channel-list td {
-	color: #7f848e;
+#footer {
+	background: #1A1C21;
+	/* background with 13% brightness */
+	border-top: 1px solid #1a1c21;
 }
 
-/* Nick colors (One Dark palette) */
+/* Footer icon */
+#footer .icon {
+	color: rgba(171, 178, 191, .8);
+}
 
-/* red */
+#footer .icon:hover,
+#footer .icon.active {
+	color: #cfd7e6;
+}
+
+/* User list */
+#chat .count {
+	background-color: #1e2127;
+	color: #abb2bf;
+}
+
+#chat .search {
+	color: #98c739;
+	padding: 15px 16px;
+}
+
+#chat .userlist {
+	background: inherit;
+	border-color: #1a1c21;
+}
+
+#chat .userlist .count::before {
+	color: inherit;
+}
+
+#chat .userlist .count {
+	color: #abb2bf;
+	background-color: inherit;
+}
+
+#chat .userlist .count .search {
+	color: #98c739;
+	background: inherit;
+	border-color: inherit;
+}
+
+#chat .userlist .user.active {
+	background: #1a1c21;
+}
+
+/* Borders */
+
+#chat .from,
+#windows .header,
+#chat .user-mode::before,
+#chat .content,
+#chat .sidebar {
+	border-color: #1a1c21;
+}
+
+
+/* Topic */
+
+#windows .header {
+	background: #1a1c21;
+}
+
+#windows .header .title,
+#windows .header .topic {
+	color: #959BA6;
+}
+
+
+/* User list */
+
+#chat .user-mode+.user-mode {
+	padding-top: 1rem;
+}
+
+#chat .user-mode::before {
+	display: none;
+}
+
+
+/* Nicknames */
+
+#chat .user {
+	color: #c678dd;
+}
+
+
+/* light-red */
+
 #chat.colored-nicks .user.color-1,
 #chat.colored-nicks .user.color-17 {
-	color: #e06c75;
+	color: #E06C75;
 }
 
-/* red light */
+
+/* purple */
+
 #chat.colored-nicks .user.color-2,
 #chat.colored-nicks .user.color-18 {
-	color: #ff7b86;
+	color: #C678DD;
 }
 
+
 /* orange */
+
 #chat.colored-nicks .user.color-3,
 #chat.colored-nicks .user.color-19 {
 	color: #d19a66;
 }
 
+
 /* yellow */
+
 #chat.colored-nicks .user.color-4,
 #chat.colored-nicks .user.color-20 {
-	color: #e5c07b;
+	color: #d19a66;
 }
 
-/* yellow light */
+
+/* also yellow */
+
 #chat.colored-nicks .user.color-5,
 #chat.colored-nicks .user.color-21 {
-	color: #f2ce8a;
+	color: #d19a66;
 }
 
-/* yellow-brown */
+
+/* also orange */
+
 #chat.colored-nicks .user.color-6,
 #chat.colored-nicks .user.color-22 {
-	color: #caa96b;
+	color: #d19a66;
 }
 
+
 /* green */
+
 #chat.colored-nicks .user.color-7,
 #chat.colored-nicks .user.color-23 {
 	color: #98c379;
 }
 
-/* green light */
+
+/* light-green */
+
 #chat.colored-nicks .user.color-8,
 #chat.colored-nicks .user.color-24 {
-	color: #a8d08d;
+	color: #98c379;
 }
 
-/* cyan/teal */
+
+/* cyan */
+
 #chat.colored-nicks .user.color-9,
 #chat.colored-nicks .user.color-25 {
 	color: #56b6c2;
 }
 
-/* cyan light */
+
+/* light-cyan */
+
 #chat.colored-nicks .user.color-10,
 #chat.colored-nicks .user.color-26 {
-	color: #6fc7d2;
+	color: #56b6c2;
 }
 
+
 /* blue */
+
 #chat.colored-nicks .user.color-11,
 #chat.colored-nicks .user.color-27 {
 	color: #61afef;
 }
 
-/* blue light */
+
+/* light-blue */
+
 #chat.colored-nicks .user.color-12,
 #chat.colored-nicks .user.color-28 {
-	color: #8fc6ff;
+	color: #61afef;
 }
 
-/* magenta */
+
+/* purple */
+
 #chat.colored-nicks .user.color-13,
 #chat.colored-nicks .user.color-29 {
 	color: #c678dd;
 }
 
-/* magenta light */
+
+/* pink */
+
 #chat.colored-nicks .user.color-14,
 #chat.colored-nicks .user.color-30 {
-	color: #d493e6;
+	color: #c678dd
 }
 
-/* neutral blue-gray */
+
+/* another orange */
+
 #chat.colored-nicks .user.color-15,
 #chat.colored-nicks .user.color-31 {
-	color: #b6bdca;
+	color: #d19a66;
 }
 
-/* neutral light */
+
+/* another also orange */
+
 #chat.colored-nicks .user.color-16,
 #chat.colored-nicks .user.color-32 {
-	color: #c8ccd4;
+	color: #d19a66;
 }
 
-/* Increase contrast of some IRC colors (One Dark accents) */
-.irc-fg2 {
+#chat a {
 	color: #61afef;
 }
 
-.irc-fg5 {
-	color: #c678dd;
+
+/* Message form */
+
+#form {
+	background: #1A1C21;
+	border-color: #1A1C21;
+	/* background with 13% brightness */
+	padding-top: 6px;
 }
 
-.irc-fg6 {
+#windows #form .input {
+	background-color: #1a1c21 !important;
+	border: none;
+	color: #abb2bf !important;
+}
+
+#form #nick {
+	display: none;
+	background: #1A1C21;
+	/* background with 13% brightness */
+	color: #abb2bf;
+}
+
+#form #submit:hover {
+	opacity: 1;
+}
+
+
+/* Buttons */
+
+#chat .show-more-button {
+	background: #1e2127;
+	/* background with 13% brightness */
+	border: 2px solid #98c739;
+	border-radius: 3px;
+	border-color: #98c739;
+	/* background with 13% brightness */
+	color: #98c739;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#chat .show-more-button:hover {
+	/*color: #fff;*/
+	background: #98c739;
+	color: #1e2127;
+}
+
+#chat .show-more-button[disabled=""] {
+	border: none;
+	color: #abb2bf;
+}
+
+#chat .show-more-button[disabled=""]:hover {
+	background: inherit;
+	border: none;
+	color: #abb2bf;
+}
+
+#chat .header {
+	color: #5c6370;
+}
+
+
+/* Notification dot on the top right corner of the menu icon */
+
+#viewport .lt::after {
+	border-color: #1e2127;
+}
+
+#chat .unread-marker::before {
+	border-color: #FA7883;
+	/* red with 98% brightness */
+}
+
+#chat .unread-marker-text::before {
+	background-color: #1e2127;
+	color: #FA7883;
+	/* red with 98% brightness */
+}
+
+#chat .date-marker::before {
+	border-color: #98c739;
+	/* green with 88% brightness */
+}
+
+#chat .date-marker-text::before {
+	background-color: #1e2127;
+	color: #98c739;
+	/* green with 88% brightness */
+}
+
+
+/* Setup text colors */
+
+#chat .msg {
+	color: #abb2bf;
+}
+
+#chat .message {
+	color: #abb2bf;
+}
+
+#chat .self .text,
+#chat .msg.channel_list_loading .text {
+	color: #C3CBD9;
+	/* fg color, brightness to 85% */
+}
+
+#chat .error,
+#chat .error .from,
+#chat .channel .highlight,
+#chat .channel .highlight .from,
+#chat .channel .highlight .text {
+	color: #d7656e;
+}
+
+#chat .unhandled .from {
+	color: #abb2bf;
+}
+
+#chat .msg.quit .time,
+#chat .msg.quit .from button {
+	color: #bc6c9c !important;
+}
+
+#chat .msg.topic {
+	color: #abb2bf;
+}
+
+#chat .msg.join .time,
+#chat .msg.join .from button {
+	color: #56b6c2 !important;
+}
+
+#chat table.channel-list td {
+	color: #abb2bf;
+}
+
+#chat table.channel-list th,
+#chat table.ban-list th,
+#chat table.channel-list td,
+#chat table.ban-list td {
+	border-bottom-color: #1a1c21;
+}
+
+#chat table.channel-list td.channel .inline-channel {
+	color: #61afef;
+	transition: opacity 0.2s;
+}
+
+#chat table.channel-list td.channel .inline-channel:hover,
+#chat table.channel-list td.channel .inline-channel:focus {
+	color: #589DD6;
+	opacity: 0.8;
+}
+
+
+
+
+/* Previews */
+
+#chat .toggle-content {
+	background: #1e2127;
+	color: #abb2bf;
+}
+
+#chat .toggle-content .body {
+	color: #5c6370;
+}
+
+
+/* Form elements */
+
+#chat-container ::-moz-placeholder,
+::-moz-placeholder {
+	color: rgba(170, 177, 191, 0.6);
+}
+
+#chat-container ::-webkit-input-placeholder,
+::-webkit-input-placeholder {
+	color: rgba(170, 177, 191, 0.6);
+}
+
+#chat-container :-ms-input-placeholder,
+:-ms-input-placeholder {
+	color: rgba(170, 177, 191, 0.6);
+}
+
+
+/* End form elements */
+
+@media (min-width: 480px) {
+	#chat .from::after {
+		background: linear-gradient(to right, rgba(30, 33, 39, 0.5) 0%, rgba(30, 33, 39, 1) 100%);
+	}
+}
+
+@media (max-width: 480px) {
+	.messages .from .user::before {
+		color: #959ba6;
+		opacity: 0.25;
+		content: "<";
+		font-weight: bold;
+	}
+
+	.messages .from .user::after {
+		color: #959BA6;
+		opacity: 0.25;
+		content: ">";
+		font-weight: bold;
+	}
+}
+
+
+/* Modifications */
+
+
+/* correct color for icons */
+
+#chat .invite .from::before,
+#chat .topic .from::before,
+#chat .mode .from::before,
+#chat .whois .from::before,
+#chat .nick .from::before,
+#chat .join .from::before {
+	color: #98c739;
+}
+
+#chat .quit .from::before,
+#chat .part .from::before,
+#chat .kick .from::before {
+	color: #E06C75;
+}
+
+
+/* Condensed status messages */
+
+#chat .condensed .content,
+#chat .away .content,
+#chat .back .content,
+#chat .join .content,
+#chat .kick .content,
+#chat .mode .content,
+#chat .nick .content,
+#chat .part .content,
+#chat .quit .content,
+#chat .topic .content,
+#chat .topic_set_by .content {
+	color: #808897;
+}
+
+
+/* Actions */
+
+#chat .action .from,
+#chat .action .text,
+#chat .action .user {
+	color: #B8875A;
+}
+
+
+/* Notices */
+
+#chat .notice .time,
+#chat .notice .text,
+#chat .chan .notice .user {
+	color: #d4666f !important;
+}
+
+#chat .notice .user::before {
+	color: #5c6370;
+	opacity: .3;
+	content: "\2013";
+}
+
+#chat .notice .user::after {
+	color: #5c6370;
+	opacity: .3;
+	content: "\2013";
+}
+
+
+/* Context Menu */
+
+#context-menu,
+.textcomplete-menu {
+	background-color: #1a1c21;
+	border-color: #14161a;
+}
+
+.context-menu-item:hover,
+.textcomplete-item:hover,
+.textcomplete-menu .active {
+	background-color: #21242b;
+	color: #98c739 !important;
+}
+
+.textcomplete-menu .active a {
+	color: #98c739;
+}
+
+.context-menu-item,
+.textcomplete-item,
+.textcomplete-item a {
+	color: #abb2bf;
+}
+
+.context-menu-divider {
+	background-color: #14161A;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	background-color: rgba(20, 22, 26, 0);
+}
+
+::-webkit-scrollbar:hover {
+	background-color: rgba(20, 22, 26, 0.3);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background: rgba(20, 22, 26, 0.5);
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+	background: rgba(20, 22, 26, 0.6);
+}
+
+
+/* Font size */
+
+.messages .msg {
+	font-size: 13px;
+}
+
+
+/* Correct alignment for sidebar icons */
+
+#sidebar .chan::before,
+#sidebar .close::before {
+	vertical-align: middle;
+}
+
+#sidebar .chan.lobby::before {
+	line-height: 24px;
+}
+
+
+/* Adjust form input size */
+
+#form #input {
+	min-height: 18px;
+	height: 18px;
+}
+
+
+/* Highlight badge color */
+
+#sidebar .badge.highlight {
+	background: #98c739;
+	color: #1e2127;
+}
+
+/* Form input colors */
+.input {
+	background-color: #272b33;
+	border-color: #1a1c21;
+	color: #abb2bf;
+}
+
+.input:disabled {
+	background-color: #21242b;
+	/* background with 17% brightness */
+}
+
+.input:not(:disabled):hover,
+.input:not(:disabled):focus {
+	border-color: #14161A;
+}
+
+/* Help page */
+#version-checker {
+	background-color: #1e2127 !important;
+	padding: 0;
+	border-radius: 0;
+	margin-bottom: 32px;
+}
+
+#version-checker::before {
+	margin-left: 0;
+}
+
+#version-checker.up-to-date {
+	color: #98c739;
+}
+
+#version-checker.loading {
 	color: #56b6c2;
 }
 
-.irc-fg12 {
-	color: #8fc6ff;
+#version-checker.loading #check-now {
+	border-color: #56b6c2;
+	color: #56b6c2;
+}
+
+#version-checker.loading #check-now:hover {
+	background-color: #56b6c2;
+	color: #1e2127;
+}
+
+#version-checker.new-version {
+	color: #d19a66;
+}
+
+#version-checker.new-version #check-now {
+	border-color: #d19a66;
+	color: #d19a66;
+}
+
+#version-checker.new-version #check-now:hover {
+	background-color: #d19a66;
+	color: #1e2127;
+}
+
+#version-checker.error {
+	color: #d4666f;
+}
+
+#version-checker.error #check-now {
+	border-color: #d4666f;
+	color: #d4666f;
+}
+
+#version-checker.error #check-now:hover {
+	background-color: #d4666f;
+	color: #1e2127;
+}
+
+#windows .window h2 {
+	border-color: #abb2bf;
+	color: #abb2bf;
+}
+
+/* Monospace formatting */
+code {
+	background-color: #272b33;
+	color: #FA7883;
+}
+
+.irc-monospace {
+	font-family: 'Fira Mono', monospace;
+}
+
+/* Keyboard shortcuts */
+kbd {
+	background-color: #434852;
+	border-color: #30343B;
+	border-bottom-color: #30343B;
+	box-shadow: inset 0 -1px 0 #30343B;
+	color: #abb2bf;
+}
+
+/* Changelog */
+#changelog.window h3 {
+	color: #959BA6;
+	border-bottom-color: #959BA6;
+}
+
+/* Time */
+#chat .time {
+	color: #abb2bf;
+}
+
+/* Sidebar button */
+#sidebar button {
+	color: #98c739;
+}
+
+#sidebar button:hover {
+	color: #1a1c21;
+}
+
+/* Extra help in Settings */
+#settings .extra-help,
+#settings #play {
+	color: #abb2bf;
+}
+
+/* Collapse network icon */
+#sidebar .network .collapse-network-icon::before {
+	color: #abb2bf;
+}
+
+/* Network state */
+#sidebar .not-secure .chan.lobby {
+	color: #B8875A;
+}
+
+#sidebar .not-secure .chan.lobby .lobby-wrap:hover,
+#sidebar .not-secure .chan.lobby.active {
+	color: #d19a66;
+}
+
+#sidebar .not-connected .chan.lobby {
+	color: #d4666f;
+}
+
+#sidebar .not-connected .chan.lobby .lobby-wrap:hover,
+#sidebar .not-connected .chan.lobby.active {
+	color: #FA7883;
 }

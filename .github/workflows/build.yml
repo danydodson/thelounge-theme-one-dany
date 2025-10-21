@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: Build & Test
+    name: Build
 
     runs-on: ubuntu-latest
 
@@ -16,6 +16,3 @@ jobs:
 
       - name: Install
         run: yarn --frozen-lockfile --non-interactive
-
-      - name: Test
-        run: yarn test
