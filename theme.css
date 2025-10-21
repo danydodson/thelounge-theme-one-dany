@@ -6,8 +6,8 @@ Color scheme based on the One Dark theme for iTerm by Nathan Buchar
 Installation instructions can be found here
 https://thelounge.github.io/docs/server/configuration.html#theme
 
-Author: Alexandre Oliveira
-GitHub: https://github.com/RockyTV
+Author: danydodson
+GitHub: https://github.com/danydodson
 */
 
 
@@ -30,7 +30,7 @@ GitHub: https://github.com/RockyTV
  * 16, light grey: #abb2bf;
  */
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,700|Ubuntu+Mono:400,700');
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -982,7 +982,7 @@ code {
 }
 
 .irc-monospace {
-	font-family: 'Fira Mono', monospace;
+	font-family: 'Ubuntu Mono', monospace;
 }
 
 /* Keyboard shortcuts */
